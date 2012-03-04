@@ -1,0 +1,31 @@
+diff --git a/src/tru_utility.cpp b/src/tru_utility.cpp
+index 9edaaa9..d56a0bb 100644
+--- a/src/tru_utility.cpp
++++ b/src/tru_utility.cpp
+@@ -42,7 +42,7 @@ Tru_utility* Tru_utility::tru_utility_ptr = NULL;
+ Tru_utility::Tru_utility() 
+ {
+       // initialize current working directory
+-      m_curr_dir = fs::current_path<fs::path>();
++      m_curr_dir = fs::current_path();
+ 
+    // native os is windows
+    #ifdef BOOST_WINDOWS_API
+@@ -66,7 +66,7 @@ bool Tru_utility::change_dir(string in_path)
+ {
+    if (in_path.size() == 0)
+    {
+-      string s = fs::system_complete(".").directory_string();
++      string s = fs::system_complete(".").string();
+       s.erase(s.end() - 1);
+       m_curr_dir = fs::path(s); 
+       return true;
+@@ -124,7 +124,7 @@ vector<string> Tru_utility::read_dir( string path )
+    for ( fs::directory_iterator dir_itr( path ) ; dir_itr != end_itr; ++dir_itr )
+    {
+       // add to the list
+-      result.push_back( dir_itr->path().file_string() );
++      result.push_back( dir_itr->path().string() );
+    }
+  
+    // return the list
