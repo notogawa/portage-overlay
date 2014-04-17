@@ -21,9 +21,9 @@ RDEPEND=">=dev-python/botocore-0.40.0
 		 >=dev-python/bcdoc-0.12.0
 		 <dev-python/bcdoc-0.13.0
 		 >=dev-python/six-1.1.0
-		 =dev-python/colorama-0.2.5
+		 =dev-python/colorama-0.2.5*
 		 >=dev-python/docutils-0.10
-		 =dev-python/rsa-3.1.2
+		 =dev-python/rsa-3.1.2*
 		 virtual/python-argparse"
 DEPEND="${RDEPEND}
 		dev-python/setuptools[${PYTHON_USEDEP}]

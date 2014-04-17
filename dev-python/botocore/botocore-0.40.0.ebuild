@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND=">=dev-python/six-1.1.0
-		 =dev-python/jmespath-0.3.1
+		 =dev-python/jmespath-0.3.1*
 		 >=dev-python/python-dateutil-2.1"
 DEPEND="${RDEPEND}
 		dev-python/setuptools[${PYTHON_USEDEP}]

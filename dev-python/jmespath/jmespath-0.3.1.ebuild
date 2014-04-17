@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND="=dev-python/ply-3.4"
+RDEPEND="=dev-python/ply-3.4*"
 DEPEND="${RDEPEND}
 		dev-python/setuptools[${PYTHON_USEDEP}]
 		test? ( dev-python/nose[${PYTHON_USEDEP}] )"
