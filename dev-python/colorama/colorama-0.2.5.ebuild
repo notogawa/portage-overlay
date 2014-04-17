@@ -7,25 +7,23 @@ PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 
 inherit distutils-r1
 
-DESCRIPTION="Low-level, data-driven core of boto 3."
-HOMEPAGE="https://github.com/boto/botocore https://pypi.python.org/pypi/botocore"
+DESCRIPTION="Cross-platform colored terminal text."
+HOMEPAGE="http://code.google.com/p/colorama/ https://pypi.python.org/pypi/colorama"
 SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
-LICENSE="Apache-2.0"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND=">=dev-python/six-1.1.0
-		 =dev-python/jmespath-0.3.1
-		 >=dev-python/python-dateutil-2.1"
+RDEPEND=""
 DEPEND="${RDEPEND}
 		dev-python/setuptools[${PYTHON_USEDEP}]
 		test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 RESTRICT="test"
 
-DOCS=( README.txt )
+DOCS=( README.rst )
 
 python_test() {
   nosetests || die "Tests fail with ${EPYTHON}"
